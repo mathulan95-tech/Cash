@@ -18,10 +18,10 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(7,7,15,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,.07);display:flex;z-index:99;padding-bottom:env(safe-area-inset-bottom,0px)}
 .nb{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 0 10px;background:none;border:none;color:#3a3a5a;font-size:10px;font-weight:600;cursor:pointer;transition:color .2s}
 .nb.on{color:#818cf8}
-.nb-icon{font-size:22px}
+.nb-icon{font-size:20px}
 .fab-wrap{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
-.fab{width:54px;height:54px;background:#818cf8;border-radius:50%;border:none;cursor:pointer;font-size:28px;color:#fff;position:absolute;top:-22px;box-shadow:0 0 0 4px #07070f,0 8px 24px rgba(129,140,248,.5);display:flex;align-items:center;justify-content:center}
-.fab-label{font-size:10px;font-weight:600;color:#3a3a5a;margin-top:34px}
+.fab{width:52px;height:52px;background:#818cf8;border-radius:50%;border:none;cursor:pointer;font-size:28px;color:#fff;position:absolute;top:-20px;box-shadow:0 0 0 4px #07070f,0 8px 24px rgba(129,140,248,.5);display:flex;align-items:center;justify-content:center}
+.fab-label{font-size:10px;font-weight:600;color:#3a3a5a;margin-top:32px}
 .hd{padding:calc(env(safe-area-inset-top,16px) + 14px) 20px 0;display:flex;align-items:center;justify-content:space-between}
 .hd-sub{font-size:11px;font-weight:700;letter-spacing:2px;color:#3a3a5a;text-transform:uppercase}
 .hd-title{font-size:22px;font-weight:800;margin-top:2px}
@@ -30,14 +30,15 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
 .hero{background:linear-gradient(135deg,#0d0d20,#111128);border:1px solid rgba(129,140,248,.18);border-radius:20px;padding:22px;margin:16px 20px 0;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;background:radial-gradient(circle,rgba(129,140,248,.07),transparent 70%);pointer-events:none}
 .hero-tag{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#7777aa;margin-bottom:8px}
-.hero-amount{font-size:42px;font-weight:800;line-height:1;letter-spacing:-1.5px}
-.hero-eur{font-size:15px;color:#7777aa;margin-top:6px;font-weight:500}
-.pills{display:flex;gap:10px;margin-top:18px}
-.pill{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:12px}
-.pill-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a;margin-bottom:4px}
-.pill-val{font-size:17px;font-weight:700}
-.pill-eur{font-size:11px;color:#7777aa;margin-top:2px}
-.prog-wrap{margin-top:18px}
+.hero-amount{font-size:40px;font-weight:800;line-height:1;letter-spacing:-1.5px}
+.hero-eur{font-size:15px;color:#7777aa;margin-top:4px;font-weight:500}
+.hero-eur-real{font-size:12px;color:#3a3a5a;margin-top:2px;font-weight:500}
+.pills{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.pill{flex:1;min-width:calc(33% - 8px);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:10px}
+.pill-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a;margin-bottom:3px}
+.pill-val{font-size:15px;font-weight:700}
+.pill-eur{font-size:10px;color:#7777aa;margin-top:1px}
+.prog-wrap{margin-top:16px}
 .prog-labels{display:flex;justify-content:space-between;font-size:11px;color:#7777aa;margin-bottom:6px;font-weight:500}
 .prog-track{height:6px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden}
 .prog-bar{height:6px;border-radius:99px;transition:width .6s ease}
@@ -47,6 +48,7 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
 .info-card-val{font-size:15px;font-weight:800}
 .info-card-sub{font-size:10px;color:#7777aa;margin-top:2px}
 .alert-bar{margin:12px 20px 0;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:#f59e0b}
+.caution-bar{margin:12px 20px 0;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);border-radius:14px;padding:12px 16px;cursor:pointer}
 .sec-head{display:flex;justify-content:space-between;align-items:center;padding:20px 20px 10px}
 .sec-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#3a3a5a}
 .sec-action{background:none;border:none;color:#818cf8;font-size:12px;font-weight:600;cursor:pointer}
@@ -59,6 +61,7 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
 .tx-meta{font-size:11px;color:#7777aa;margin-top:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .chip{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:10px;font-weight:700}
 .chip-card{background:rgba(56,189,248,.15);color:#38bdf8}
+.chip-ville{background:rgba(129,140,248,.15);color:#818cf8}
 .tx-right{text-align:right;flex-shrink:0}
 .tx-thb{font-size:15px;font-weight:700}
 .tx-eur-sm{font-size:11px;color:#7777aa;margin-top:2px}
@@ -71,7 +74,6 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
 .dg-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px 6px}
 .dg-date{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a}
 .dg-total{font-size:12px;color:#f87171;font-weight:700}
-.dg-budget{font-size:11px;font-weight:600}
 .empty{text-align:center;padding:60px 20px;color:#3a3a5a}
 .empty-icon{font-size:48px;margin-bottom:12px}
 .empty-txt{font-size:15px;font-weight:600;color:#7777aa}
@@ -104,14 +106,18 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
 .pay-btn.on-card{border-color:#38bdf8;background:rgba(56,189,248,.1);color:#38bdf8}
 .btn-p{background:#818cf8;color:#fff;border:none;border-radius:14px;padding:16px;font-size:16px;font-weight:700;width:100%;cursor:pointer}
 .btn-g{background:#22c55e;color:#fff;border:none;border-radius:14px;padding:16px;font-size:16px;font-weight:700;width:100%;cursor:pointer}
+.btn-amber{background:#f59e0b;color:#fff;border:none;border-radius:14px;padding:16px;font-size:16px;font-weight:700;width:100%;cursor:pointer}
 .btn-d{background:none;border:1.5px solid rgba(248,113,113,.35);color:#f87171;border-radius:14px;padding:14px;font-size:15px;font-weight:600;width:100%;cursor:pointer;margin-top:10px}
 .btn-ghost{background:none;border:none;color:#7777aa;font-size:14px;font-weight:600;width:100%;cursor:pointer;padding:12px 0;margin-top:4px}
 .tog{display:flex;gap:8px;margin-bottom:20px}
 .tog-btn{flex:1;padding:12px;border-radius:12px;border:2px solid rgba(255,255,255,.07);background:#13132a;color:#7777aa;font-weight:700;font-size:13px;cursor:pointer;transition:all .15s}
 .tog-btn.on{border-color:#818cf8;background:rgba(129,140,248,.12);color:#818cf8}
-.taux-badge{background:#13132a;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
 .retrait-row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:16px;background:#0e0e1c;border:1px solid rgba(34,197,94,.15);margin-bottom:8px;cursor:pointer}
 .retrait-row:active{background:#13132a}
+.caution-row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:16px;background:#0e0e1c;border:1px solid rgba(99,102,241,.2);margin-bottom:8px;cursor:pointer}
+.caution-row:active{background:#13132a}
+.ville-chip{display:inline-flex;align-items:center;padding:6px 14px;border-radius:99px;font-size:13px;font-weight:700;border:2px solid transparent;cursor:pointer;background:#13132a;color:#7777aa;transition:all .15s}
+.ville-chip.on{border-color:#818cf8;background:rgba(129,140,248,.1);color:#818cf8}
 .splash{position:fixed;inset:0;background:#07070f;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center}
 .splash-emoji{font-size:80px;margin-bottom:24px;animation:bounce 1s ease infinite alternate}
 @keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-12px)}}
@@ -127,6 +133,7 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
     <button class="btn-sm btn-green" onclick="openRetrait()">+ Retrait</button>
   </div>
   <div class="hero" id="hero"></div>
+  <div id="caution-wrap"></div>
   <div id="info-cards-wrap"></div>
   <div id="alert-wrap"></div>
   <div id="stats-sec" style="display:none">
@@ -146,15 +153,18 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
     <div class="empty-sub">Appuie sur "+ Retrait" en haut à droite</div>
   </div>
 </div>
+
 <div class="page" id="pg-history">
-  <div class="hd" style="padding-bottom:16px">
+  <div class="hd" style="padding-bottom:8px">
     <div><div class="hd-sub">Historique</div><div class="hd-title">Par jour</div></div>
   </div>
+  <div style="padding:8px 20px;display:flex;gap:8px;flex-wrap:wrap" id="ville-filter"></div>
   <div id="full-list"></div>
   <div class="empty" id="empty-hist" style="display:none">
     <div class="empty-icon">🧾</div><div class="empty-txt">Aucune dépense enregistrée</div>
   </div>
 </div>
+
 <div class="page" id="pg-retraits">
   <div class="hd" style="padding-bottom:16px">
     <div><div class="hd-sub">Cash</div><div class="hd-title">Mes retraits</div></div>
@@ -165,14 +175,27 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
     <div class="empty-icon">💵</div><div class="empty-txt">Aucun retrait enregistré</div>
   </div>
 </div>
+
 <div class="page" id="pg-convert">
   <div class="hd" style="padding-bottom:16px">
     <div><div class="hd-sub">Outil</div><div class="hd-title">Convertisseur</div></div>
   </div>
   <div style="padding:0 20px">
-    <div class="taux-badge">
-      <span style="font-size:13px;color:#7777aa;font-weight:600">Taux fixe</span>
-      <span style="font-size:14px;font-weight:800;color:#818cf8">1 € = 37,5 ฿</span>
+    <div style="background:#13132a;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:12px 16px;margin-bottom:12px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a;margin-bottom:6px">Taux aéroport (principal)</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:13px;color:#7777aa;font-weight:600">1 € =</span>
+        <input class="inp" type="number" inputmode="decimal" id="taux-airport" placeholder="ex: 34" style="padding:8px 12px;font-size:16px;font-weight:800;color:#f59e0b;width:120px" oninput="saveTaux()">
+        <span style="font-size:13px;color:#7777aa;font-weight:600">฿</span>
+      </div>
+    </div>
+    <div style="background:#13132a;border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:10px 16px;margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a;margin-bottom:4px">Taux actuel marché</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:12px;color:#3a3a5a;font-weight:600">1 € =</span>
+        <input class="inp" type="number" inputmode="decimal" id="taux-market" placeholder="ex: 37.5" style="padding:6px 10px;font-size:13px;font-weight:600;color:#3a3a5a;width:100px;background:#0e0e1c" oninput="saveTaux()">
+        <span style="font-size:12px;color:#3a3a5a;font-weight:600">฿</span>
+      </div>
     </div>
     <div class="tog">
       <button class="tog-btn on" id="tog-eur" onclick="setDir('eur')">€ → ฿</button>
@@ -185,16 +208,23 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
       <span class="inp-prefix" id="conv-prefix">€</span>
       <input class="inp inp-big inp-pl" type="number" inputmode="decimal" placeholder="0" id="conv-inp" oninput="calcConv()">
     </div>
+    <div id="conv-res-wrap" style="margin-top:16px;display:none">
+      <div style="background:linear-gradient(135deg,#0d0d20,#111128);border:1px solid rgba(245,158,11,.2);border-radius:16px;padding:16px;margin-bottom:8px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#f59e0b;margin-bottom:4px">Taux aéroport</div>
+        <div style="font-size:32px;font-weight:800;letter-spacing:-1px;color:#f59e0b" id="conv-airport">—</div>
+      </div>
+      <div style="background:#0e0e1c;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a;margin-bottom:4px">Taux marché</div>
+        <div style="font-size:22px;font-weight:700;color:#3a3a5a" id="conv-market">—</div>
+      </div>
+    </div>
   </div>
-  <div class="conv-result">
-    <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#7777aa;margin-bottom:10px">Résultat</div>
-    <div class="conv-res-val" id="conv-result">—</div>
-  </div>
-  <div style="padding:0 20px;margin-top:20px">
-    <div class="sec-title" style="margin-bottom:12px">Référence rapide</div>
+  <div style="padding:0 20px;margin-top:16px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#3a3a5a;margin-bottom:12px">Référence rapide (taux aéroport)</div>
     <div id="ref-table"></div>
   </div>
 </div>
+
 <nav>
   <button class="nb on" id="nb-home" onclick="showPage('home')"><span class="nb-icon">🏠</span>Accueil</button>
   <button class="nb" id="nb-retraits" onclick="showPage('retraits')"><span class="nb-icon">💵</span>Retraits</button>
@@ -206,6 +236,8 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
   <button class="nb" id="nb-convert" onclick="showPage('convert')"><span class="nb-icon">💱</span>Convertir</button>
 </nav>
 </div>
+
+<!-- SHEET RETRAIT -->
 <div class="overlay" id="ov-retrait" onclick="closeSheet('ov-retrait')">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
@@ -227,6 +259,8 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
     <button class="btn-ghost" onclick="closeSheet('ov-retrait')">Annuler</button>
   </div>
 </div>
+
+<!-- SHEET DEPENSE -->
 <div class="overlay" id="ov-dep" onclick="closeSheet('ov-dep')">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
@@ -247,6 +281,11 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
       <div class="eur-hint" id="d-hint"></div>
     </div>
     <div class="field">
+      <div class="flabel">Ville / Destination</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px" id="ville-chips"></div>
+      <input class="inp" type="text" id="d-ville-new" placeholder="+ Nouvelle ville" style="font-size:13px;padding:10px 14px" oninput="showNewVille()">
+    </div>
+    <div class="field">
       <div class="flabel">Catégorie</div>
       <div class="cat-grid" id="cat-grid"></div>
       <button onclick="openNewCat()" style="width:100%;margin-top:8px;padding:10px;border-radius:12px;background:#13132a;border:1.5px dashed rgba(255,255,255,.1);color:#7777aa;font-size:12px;font-weight:600;cursor:pointer">+ Créer une catégorie</button>
@@ -264,6 +303,37 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
     <button class="btn-ghost" onclick="closeSheet('ov-dep')">Annuler</button>
   </div>
 </div>
+
+<!-- SHEET CAUTION -->
+<div class="overlay" id="ov-caution" onclick="closeSheet('ov-caution')">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <div class="handle"></div>
+    <div class="sheet-title" id="caution-title">🔒 Nouvelle caution</div>
+    <p style="font-size:13px;color:#7777aa;margin-bottom:20px;line-height:1.6">L'argent de la caution est mis de côté — il reviendra dans ton solde quand tu la récupères.</p>
+    <div class="field">
+      <div class="flabel">Montant (฿)</div>
+      <div class="inp-wrap">
+        <span class="inp-prefix">฿</span>
+        <input class="inp inp-big inp-pl" type="number" inputmode="decimal" placeholder="0" id="c-amount" oninput="showHintC()">
+      </div>
+      <div class="eur-hint" id="c-hint"></div>
+    </div>
+    <div class="field">
+      <div class="flabel">Pour quoi ?</div>
+      <input class="inp" type="text" id="c-label" placeholder="Ex: Scooter Honda, Logement...">
+    </div>
+    <div class="field">
+      <div class="flabel">Date</div>
+      <input class="inp" type="date" id="c-date">
+    </div>
+    <button class="btn-p" id="c-submit" onclick="submitCaution()">Mettre en caution</button>
+    <button class="btn-g" id="c-recover" onclick="recoverCaution()" style="display:none;margin-top:10px">✅ J'ai récupéré la caution</button>
+    <button class="btn-d" id="c-delete" onclick="deleteCaution()" style="display:none">Supprimer</button>
+    <button class="btn-ghost" onclick="closeSheet('ov-caution')">Annuler</button>
+  </div>
+</div>
+
+<!-- SHEET NOUVELLE CAT -->
 <div class="overlay" id="ov-newcat" onclick="closeSheet('ov-newcat')">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
@@ -280,82 +350,237 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-w
     <button class="btn-ghost" onclick="closeSheet('ov-newcat')">Annuler</button>
   </div>
 </div>
+
+<!-- SHEET SETTINGS -->
 <div class="overlay" id="ov-settings" onclick="closeSheet('ov-settings')">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="handle"></div>
     <div class="sheet-title">⚙️ Paramètres</div>
     <div class="field">
-      <div class="flabel">Date de retour (pour budget/jour)</div>
+      <div class="flabel">Date de retour</div>
       <input class="inp" type="date" id="s-return">
     </div>
     <button class="btn-p" onclick="saveSettings()">Enregistrer</button>
     <button class="btn-ghost" onclick="closeSheet('ov-settings')">Annuler</button>
   </div>
 </div>
+
+<!-- SPLASH -->
 <div class="splash" id="splash" style="display:none">
   <div class="splash-emoji">💆‍♀️</div>
   <div class="splash-title">wsh les booms j'ai fais une maj, ça vaut un massage hihihi</div>
   <button class="splash-btn" onclick="closeSplash()">On est good 🙏</button>
 </div>
+
 <script>
-var TAUX=37.5;
-var MAJ_KEY='maj_v2';
+var MAJ_KEY='maj_v3';
 var CATS_DEFAULT={nourriture:{l:'Nourriture',i:'🍜',c:'#f97316'},transport:{l:'Transport',i:'🛺',c:'#38bdf8'},scooter:{l:'Scooter',i:'🛵',c:'#06b6d4'},logement:{l:'Logement',i:'🏨',c:'#818cf8'},shopping:{l:'Shopping',i:'🛍️',c:'#f472b6'},activites:{l:'Activités',i:'🤿',c:'#34d399'},sante:{l:'Santé',i:'💊',c:'#2dd4bf'},soiree:{l:'Soirée',i:'🍹',c:'#fbbf24'},autre:{l:'Autre',i:'📦',c:'#94a3b8'}};
 var KEY='cashthai_v5';
-var state={retraits:[],txs:[],customCats:{},returnDate:null};
-try{var s=localStorage.getItem(KEY);if(s){var parsed=JSON.parse(s);state=Object.assign(state,parsed);}}catch(e){}
+var state={retraits:[],txs:[],customCats:{},returnDate:null,cautions:[],tauxAirport:34,tauxMarket:37.5,villes:[]};
+try{var s=localStorage.getItem(KEY);if(s){var parsed=JSON.parse(s);state=Object.assign(state,parsed);}else{var old=localStorage.getItem('cashthai_v4');if(old){var oldData=JSON.parse(old);if(oldData.retrait&&!oldData.retraits){state.retraits=[{id:1,amount:oldData.retrait,date:new Date().toISOString().slice(0,10)}];}if(oldData.retraits){state.retraits=oldData.retraits;}if(oldData.txs){state.txs=oldData.txs;}localStorage.setItem(KEY,JSON.stringify(state));}}}catch(e){}
+
 function getCats(){return Object.assign({},CATS_DEFAULT,state.customCats||{});}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+function tA(){return parseFloat(state.tauxAirport)||34;}
+function tM(){return parseFloat(state.tauxMarket)||37.5;}
 function fB(n){return '฿'+Math.round(n).toLocaleString('fr-FR');}
-function fE(n){return '≈'+(n/TAUX).toFixed(0)+' €';}
-function toE(n){return (n/TAUX).toFixed(0)+' €';}
+function fEa(n){return '≈'+(n/tA()).toFixed(0)+' €';}
+function fEm(n){return (n/tM()).toFixed(0)+' €';}
 function todayStr(){return new Date().toISOString().slice(0,10);}
 function fmtDate(d){var dt=new Date(d+'T00:00:00');var now=new Date();now.setHours(0,0,0,0);var diff=Math.round((now-dt)/86400000);if(diff===0)return "Aujourd'hui";if(diff===1)return 'Hier';return dt.toLocaleDateString('fr-FR',{weekday:'short',day:'numeric',month:'short'});}
 function daysLeft(){if(!state.returnDate)return null;var ret=new Date(state.returnDate+'T00:00:00');var now=new Date();now.setHours(0,0,0,0);var d=Math.ceil((ret-now)/86400000);return d>0?d:null;}
 function totalRetrait(){return (state.retraits||[]).reduce(function(s,r){return s+r.amount;},0);}
+function totalCautionActive(){return (state.cautions||[]).filter(function(c){return !c.recovered;}).reduce(function(s,c){return s+c.amount;},0);}
 function totalSpentCash(){return state.txs.filter(function(t){return t.payment!=='card';}).reduce(function(s,t){return s+t.amount;},0);}
 function totalSpentCard(){return state.txs.filter(function(t){return t.payment==='card';}).reduce(function(s,t){return s+t.amount;},0);}
-function budgetPerDay(){var dl=daysLeft();var rem=totalRetrait()-totalSpentCash();if(!dl||rem<=0)return null;return rem/dl;}
+function budgetPerDay(){var dl=daysLeft();var rem=totalRetrait()-totalSpentCash()-totalCautionActive();if(!dl||rem<=0)return null;return rem/dl;}
 function todaySpentCash(){var today=todayStr();return state.txs.filter(function(t){return t.date===today&&t.payment!=='card';}).reduce(function(s,t){return s+t.amount;},0);}
-function checkSplash(){var shown=localStorage.getItem(MAJ_KEY);if(!shown){document.getElementById('splash').style.display='flex';}}
+
+function checkSplash(){if(!localStorage.getItem(MAJ_KEY)){document.getElementById('splash').style.display='flex';}}
 function closeSplash(){localStorage.setItem(MAJ_KEY,'1');document.getElementById('splash').style.display='none';}
+
 var pages=['home','history','retraits','convert'];
-function showPage(name){pages.forEach(function(p){document.getElementById('pg-'+p).classList.remove('on');var nb=document.getElementById('nb-'+p);if(nb)nb.classList.remove('on');});document.getElementById('pg-'+name).classList.add('on');var nb=document.getElementById('nb-'+name);if(nb)nb.classList.add('on');if(name==='home')renderHome();if(name==='history')renderHistory();if(name==='retraits')renderRetraits();if(name==='convert')renderRef();}
-function renderHome(){var ret=totalRetrait();var spentCash=totalSpentCash();var spentCard=totalSpentCard();var rem=ret-spentCash;var pct=ret>0?Math.min((spentCash/ret)*100,100):0;var col=pct<60?'#22c55e':pct<85?'#f59e0b':'#f87171';var hero=document.getElementById('hero');if(ret===0){hero.innerHTML='<div style="text-align:center;padding:16px 0"><div style="font-size:40px">💵</div><div style="font-weight:700;margin-top:10px">Aucun retrait enregistré</div><div style="font-size:13px;color:#7777aa;margin-top:6px">Appuie sur \"+ Retrait\" pour commencer</div></div>';}else{hero.innerHTML='<div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div class="hero-tag">Il te reste (cash)</div><div class="hero-amount" style="color:'+(rem>=0?col:'#f87171')+'">'+fB(rem)+'</div><div class="hero-eur">'+fE(rem)+'</div></div><button onclick="openSettings()" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:7px 12px;color:#7777aa;font-size:12px;font-weight:600;cursor:pointer">⚙️</button></div><div class="pills"><div class="pill"><div class="pill-label">Retiré</div><div class="pill-val" style="color:#22c55e">'+fB(ret)+'</div><div class="pill-eur">'+fE(ret)+'</div></div><div class="pill"><div class="pill-label">Cash dépensé</div><div class="pill-val" style="color:#f87171">'+fB(spentCash)+'</div><div class="pill-eur">'+fE(spentCash)+'</div></div>'+(spentCard>0?'<div class="pill"><div class="pill-label">Carte</div><div class="pill-val" style="color:#38bdf8">'+fB(spentCard)+'</div><div class="pill-eur">'+fE(spentCard)+'</div></div>':'')+'</div><div class="prog-wrap"><div class="prog-labels"><span>'+Math.round(pct)+'% utilisé</span><span>'+fB(rem)+' restant</span></div><div class="prog-track"><div class="prog-bar" style="width:'+pct+'%;background:linear-gradient(90deg,'+col+'77,'+col+')"></div></div></div>';}
-var icWrap=document.getElementById('info-cards-wrap');var dl=daysLeft();var bpd=budgetPerDay();var projected=null;if(ret>0&&spentCash>0){var days=state.txs.filter(function(t){return t.payment!=='card';}).reduce(function(acc,t){acc[t.date]=1;return acc;},{});var nd=Object.keys(days).length||1;var avgDay=spentCash/nd;var rem2=ret-spentCash;projected=avgDay>0?Math.floor(rem2/avgDay):null;}var cards='';if(dl&&bpd){cards+='<div class="info-card"><div class="info-card-label">Budget/jour</div><div class="info-card-val" style="color:#818cf8">'+fB(bpd)+'</div><div class="info-card-sub">'+fE(bpd)+' · '+dl+'j restants</div></div>';}if(projected!==null){cards+='<div class="info-card"><div class="info-card-label">Solde projeté</div><div class="info-card-val" style="color:'+(projected<3?'#f87171':projected<7?'#f59e0b':'#22c55e')+'">'+projected+' jours</div><div class="info-card-sub">à ce rythme</div></div>';}icWrap.innerHTML=cards?'<div class="info-cards">'+cards+'</div>':'';
-var alertWrap=document.getElementById('alert-wrap');if(bpd){var todayS=todaySpentCash();if(todayS>bpd){alertWrap.innerHTML='<div class="alert-bar">⚠️ Budget du jour dépassé ! '+fB(todayS-bpd)+' de plus que prévu</div>';}else{alertWrap.innerHTML='';}}else{alertWrap.innerHTML='';}
-var CATS=getCats();var bycat={};state.txs.forEach(function(t){bycat[t.cat]=(bycat[t.cat]||0)+t.amount;});var arr=Object.entries(bycat).sort(function(a,b){return b[1]-a[1];});var mx=arr.length?arr[0][1]:1;var statSec=document.getElementById('stats-sec');var bars=document.getElementById('stats-bars');if(arr.length){statSec.style.display='block';bars.innerHTML=arr.map(function(e){var cat=e[0],amt=e[1];var c=CATS[cat]||{l:cat,i:'📦',c:'#94a3b8'};return '<div class="stat"><div class="stat-row"><div class="stat-cat"><span>'+c.i+'</span><span>'+c.l+'</span></div><div class="stat-amt"><span style="color:'+c.c+'">'+fB(amt)+'</span> <span style="color:#3a3a5a;font-weight:500">· '+toE(amt)+'</span></div></div><div class="bar-bg"><div class="bar-fill" style="width:'+((amt/mx)*100)+'%;background:'+c.c+'"></div></div></div>';}).join('');}else{statSec.style.display='none';}
-var rec=document.getElementById('recent-list');var recSec=document.getElementById('recent-sec');var emptyH=document.getElementById('empty-home');if(!state.txs.length){recSec.style.display='none';emptyH.style.display='block';}else{recSec.style.display='block';emptyH.style.display='none';rec.innerHTML=[].concat(state.txs).reverse().slice(0,4).map(txHtml).join('');}}
-function txHtml(tx){var CATS=getCats();var c=CATS[tx.cat]||{l:tx.cat,i:'📦',c:'#94a3b8'};var isCard=tx.payment==='card';return '<div class="tx" onclick="openEdit(\''+tx.id+'\')"><div class="tx-ic" style="background:'+c.c+'20">'+c.i+'</div><div class="tx-info"><div class="tx-name">'+(tx.label||c.l)+'</div><div class="tx-meta"><span>'+fmtDate(tx.date)+'</span><span class="chip" style="background:'+c.c+'18;color:'+c.c+'">'+c.l+'</span>'+(isCard?'<span class="chip chip-card">💳 Carte</span>':'')+'</div></div><div class="tx-right"><div class="tx-thb" style="color:'+(isCard?'#38bdf8':'#f87171')+'">-'+fB(tx.amount)+'</div><div class="tx-eur-sm">'+fE(tx.amount)+'</div></div></div>';}
-function renderHistory(){var el=document.getElementById('full-list');var emp=document.getElementById('empty-hist');if(!state.txs.length){el.innerHTML='';emp.style.display='block';return;}emp.style.display='none';var byDate={};[].concat(state.txs).reverse().forEach(function(tx){byDate[tx.date]=byDate[tx.date]||[];byDate[tx.date].push(tx);});var dates=Object.keys(byDate).sort(function(a,b){return b>a?1:-1;});var bpd=budgetPerDay();el.innerHTML=dates.map(function(d){var txs=byDate[d];var totCash=txs.filter(function(t){return t.payment!=='card';}).reduce(function(s,t){return s+t.amount;},0);var totCard=txs.filter(function(t){return t.payment==='card';}).reduce(function(s,t){return s+t.amount;},0);var over=bpd&&totCash>bpd;return '<div><div class="dg-head"><span class="dg-date">'+fmtDate(d)+'</span><div style="text-align:right">'+(totCash>0?'<div class="dg-total">💵 -'+fB(totCash)+(over?' ⚠️':'')+'</div>':'')+(totCard>0?'<div class="dg-budget" style="color:#38bdf8">💳 -'+fB(totCard)+'</div>':'')+'</div></div><div style="padding:0 20px">'+txs.map(txHtml).join('')+'</div></div>';}).join('');}
-function renderRetraits(){var el=document.getElementById('retraits-list');var emp=document.getElementById('empty-retraits');var retraits=state.retraits||[];if(!retraits.length){el.innerHTML='';emp.style.display='block';return;}emp.style.display='none';var total=totalRetrait();el.innerHTML='<div style="background:#0e0e1c;border:1px solid rgba(34,197,94,.15);border-radius:16px;padding:16px;margin-bottom:16px"><div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a;margin-bottom:4px">Total retiré</div><div style="font-size:28px;font-weight:800;color:#22c55e">'+fB(total)+'</div><div style="font-size:13px;color:#7777aa;margin-top:4px">'+fE(total)+'</div></div>'+[].concat(retraits).reverse().map(function(r){return '<div class="retrait-row" onclick="editRetrait(\''+r.id+'\')"><div style="width:42px;height:42px;border-radius:13px;background:rgba(34,197,94,.12);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">💵</div><div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:600">Retrait cash</div><div style="font-size:11px;color:#7777aa;margin-top:3px">'+fmtDate(r.date)+'</div></div><div style="text-align:right;flex-shrink:0"><div style="font-size:15px;font-weight:700;color:#22c55e">+'+fB(r.amount)+'</div><div style="font-size:11px;color:#7777aa;margin-top:2px">'+fE(r.amount)+'</div></div></div>';}).join('');}
+function showPage(name){pages.forEach(function(p){document.getElementById('pg-'+p).classList.remove('on');var nb=document.getElementById('nb-'+p);if(nb)nb.classList.remove('on');});document.getElementById('pg-'+name).classList.add('on');var nb=document.getElementById('nb-'+name);if(nb)nb.classList.add('on');if(name==='home')renderHome();if(name==='history')renderHistory();if(name==='retraits')renderRetraits();if(name==='convert')renderConvert();}
+
+function renderHome(){
+  var ret=totalRetrait();
+  var cautionAct=totalCautionActive();
+  var spentCash=totalSpentCash();
+  var spentCard=totalSpentCard();
+  var dispo=ret-spentCash-cautionAct;
+  var pct=ret>0?Math.min(((spentCash+cautionAct)/ret)*100,100):0;
+  var col=pct<60?'#22c55e':pct<85?'#f59e0b':'#f87171';
+  var hero=document.getElementById('hero');
+  if(ret===0){
+    hero.innerHTML='<div style="text-align:center;padding:16px 0"><div style="font-size:40px">💵</div><div style="font-weight:700;margin-top:10px">Aucun retrait enregistré</div><div style="font-size:13px;color:#7777aa;margin-top:6px">Appuie sur \"+ Retrait\" pour commencer</div></div>';
+  } else {
+    hero.innerHTML='<div style="display:flex;justify-content:space-between;align-items:flex-start">'+
+      '<div><div class="hero-tag">Disponible</div>'+
+      '<div class="hero-amount" style="color:'+(dispo>=0?col:'#f87171')+'">'+fB(dispo)+'</div>'+
+      '<div class="hero-eur">'+fEa(dispo)+'</div>'+
+      '<div class="hero-eur-real">marché: '+fEm(dispo)+'</div></div>'+
+      '<button onclick="openSettings()" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:7px 12px;color:#7777aa;font-size:12px;font-weight:600;cursor:pointer">⚙️</button></div>'+
+      '<div class="pills">'+
+        '<div class="pill"><div class="pill-label">Retiré</div><div class="pill-val" style="color:#22c55e">'+fB(ret)+'</div><div class="pill-eur">'+fEa(ret)+'</div></div>'+
+        '<div class="pill"><div class="pill-label">Dépensé</div><div class="pill-val" style="color:#f87171">'+fB(spentCash)+'</div><div class="pill-eur">'+fEa(spentCash)+'</div></div>'+
+        (cautionAct>0?'<div class="pill"><div class="pill-label">Cautions</div><div class="pill-val" style="color:#818cf8">'+fB(cautionAct)+'</div><div class="pill-eur">'+fEa(cautionAct)+'</div></div>':'')+
+        (spentCard>0?'<div class="pill"><div class="pill-label">Carte</div><div class="pill-val" style="color:#38bdf8">'+fB(spentCard)+'</div><div class="pill-eur">'+fEa(spentCard)+'</div></div>':'')+
+      '</div>'+
+      '<div class="prog-wrap"><div class="prog-labels"><span>'+Math.round(pct)+'% utilisé</span><span>'+fB(dispo)+' dispo</span></div>'+
+      '<div class="prog-track"><div class="prog-bar" style="width:'+pct+'%;background:linear-gradient(90deg,'+col+'77,'+col+')"></div></div></div>';
+  }
+
+  // Cautions actives
+  var cautWrap=document.getElementById('caution-wrap');
+  var actCautions=(state.cautions||[]).filter(function(c){return !c.recovered;});
+  if(actCautions.length){
+    cautWrap.innerHTML='<div class="caution-bar" onclick="showPage(\'retraits\')">'+
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">'+
+        '<span style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#818cf8">🔒 Cautions en attente</span>'+
+        '<span style="font-size:13px;font-weight:800;color:#818cf8">'+fB(cautionAct)+'</span>'+
+      '</div>'+
+      actCautions.map(function(c){return '<div style="font-size:12px;color:#7777aa;margin-top:2px">'+c.label+' · '+fB(c.amount)+'</div>';}).join('')+
+    '</div>';
+  } else { cautWrap.innerHTML=''; }
+
+  var icWrap=document.getElementById('info-cards-wrap');
+  var dl=daysLeft();var bpd=budgetPerDay();var projected=null;
+  if(ret>0&&spentCash>0){var days=state.txs.filter(function(t){return t.payment!=='card';}).reduce(function(acc,t){acc[t.date]=1;return acc;},{});var nd=Object.keys(days).length||1;var avgDay=spentCash/nd;var rem2=ret-spentCash-cautionAct;projected=avgDay>0?Math.floor(rem2/avgDay):null;}
+  var cards='';
+  if(dl&&bpd){cards+='<div class="info-card"><div class="info-card-label">Budget/jour</div><div class="info-card-val" style="color:#818cf8">'+fB(bpd)+'</div><div class="info-card-sub">'+fEa(bpd)+' · '+dl+'j restants</div></div>';}
+  if(projected!==null){cards+='<div class="info-card"><div class="info-card-label">Solde projeté</div><div class="info-card-val" style="color:'+(projected<3?'#f87171':projected<7?'#f59e0b':'#22c55e')+'">'+projected+' jours</div><div class="info-card-sub">à ce rythme</div></div>';}
+  icWrap.innerHTML=cards?'<div class="info-cards">'+cards+'</div>':'';
+
+  var alertWrap=document.getElementById('alert-wrap');
+  if(bpd){var todayS=todaySpentCash();if(todayS>bpd){alertWrap.innerHTML='<div class="alert-bar">⚠️ Budget du jour dépassé ! '+fB(todayS-bpd)+' de plus que prévu</div>';}else{alertWrap.innerHTML='';}}else{alertWrap.innerHTML='';}
+
+  var CATS=getCats();var bycat={};state.txs.forEach(function(t){bycat[t.cat]=(bycat[t.cat]||0)+t.amount;});
+  var arr=Object.entries(bycat).sort(function(a,b){return b[1]-a[1];});var mx=arr.length?arr[0][1]:1;
+  var statSec=document.getElementById('stats-sec');var bars=document.getElementById('stats-bars');
+  if(arr.length){statSec.style.display='block';bars.innerHTML=arr.map(function(e){var cat=e[0],amt=e[1];var c=CATS[cat]||{l:cat,i:'📦',c:'#94a3b8'};return '<div class="stat"><div class="stat-row"><div class="stat-cat"><span>'+c.i+'</span><span>'+c.l+'</span></div><div class="stat-amt"><span style="color:'+c.c+'">'+fB(amt)+'</span> <span style="color:#3a3a5a;font-weight:500">· '+fEa(amt)+'</span></div></div><div class="bar-bg"><div class="bar-fill" style="width:'+((amt/mx)*100)+'%;background:'+c.c+'"></div></div></div>';}).join('');}else{statSec.style.display='none';}
+
+  var rec=document.getElementById('recent-list');var recSec=document.getElementById('recent-sec');var emptyH=document.getElementById('empty-home');
+  if(!state.txs.length){recSec.style.display='none';emptyH.style.display='block';}
+  else{recSec.style.display='block';emptyH.style.display='none';rec.innerHTML=[].concat(state.txs).reverse().slice(0,4).map(txHtml).join('');}
+}
+
+function txHtml(tx){
+  var CATS=getCats();var c=CATS[tx.cat]||{l:tx.cat,i:'📦',c:'#94a3b8'};var isCard=tx.payment==='card';
+  return '<div class="tx" onclick="openEdit(\''+tx.id+'\')">'+
+    '<div class="tx-ic" style="background:'+c.c+'20">'+c.i+'</div>'+
+    '<div class="tx-info"><div class="tx-name">'+(tx.label||c.l)+'</div>'+
+    '<div class="tx-meta"><span>'+fmtDate(tx.date)+'</span>'+
+    '<span class="chip" style="background:'+c.c+'18;color:'+c.c+'">'+c.l+'</span>'+
+    (isCard?'<span class="chip chip-card">💳</span>':'')+
+    (tx.ville?'<span class="chip chip-ville">📍'+tx.ville+'</span>':'')+
+    '</div></div>'+
+    '<div class="tx-right"><div class="tx-thb" style="color:'+(isCard?'#38bdf8':'#f87171')+'">-'+fB(tx.amount)+'</div>'+
+    '<div class="tx-eur-sm">'+fEa(tx.amount)+'</div></div></div>';
+}
+
+var histVilleFilter='all';
+function renderHistory(){
+  var el=document.getElementById('full-list');var emp=document.getElementById('empty-hist');
+  if(!state.txs.length){el.innerHTML='';emp.style.display='block';renderVilleFilter();return;}
+  emp.style.display='none';renderVilleFilter();
+  var txsF=histVilleFilter==='all'?state.txs:state.txs.filter(function(t){return t.ville===histVilleFilter;});
+  if(!txsF.length){el.innerHTML='<div class="empty"><div class="empty-icon">📍</div><div class="empty-txt">Aucune dépense à '+histVilleFilter+'</div></div>';return;}
+  var byDate={};[].concat(txsF).reverse().forEach(function(tx){byDate[tx.date]=byDate[tx.date]||[];byDate[tx.date].push(tx);});
+  var dates=Object.keys(byDate).sort(function(a,b){return b>a?1:-1;});
+  var bpd=budgetPerDay();
+  el.innerHTML=dates.map(function(d){
+    var txs=byDate[d];var totCash=txs.filter(function(t){return t.payment!=='card';}).reduce(function(s,t){return s+t.amount;},0);
+    var totCard=txs.filter(function(t){return t.payment==='card';}).reduce(function(s,t){return s+t.amount;},0);var over=bpd&&totCash>bpd;
+    return '<div><div class="dg-head"><span class="dg-date">'+fmtDate(d)+'</span><div style="text-align:right">'+(totCash>0?'<div class="dg-total">💵 -'+fB(totCash)+(over?' ⚠️':'')+'</div>':'')+(totCard>0?'<div style="font-size:11px;color:#38bdf8;font-weight:600">💳 -'+fB(totCard)+'</div>':'')+'</div></div><div style="padding:0 20px">'+txs.map(txHtml).join('')+'</div></div>';
+  }).join('');
+}
+
+function renderVilleFilter(){
+  var villes=state.villes||[];var el=document.getElementById('ville-filter');
+  if(!villes.length){el.innerHTML='';return;}
+  el.innerHTML='<span class="ville-chip'+(histVilleFilter==='all'?' on':'')+'" onclick="filterVille(\'all\')">Toutes</span>'+
+    villes.map(function(v){return '<span class="ville-chip'+(histVilleFilter===v?' on':'')+'" onclick="filterVille(\''+v+'\')">📍'+v+'</span>';}).join('');
+}
+function filterVille(v){histVilleFilter=v;renderHistory();}
+
+function renderRetraits(){
+  var el=document.getElementById('retraits-list');var emp=document.getElementById('empty-retraits');
+  var retraits=state.retraits||[];var cautions=state.cautions||[];
+  if(!retraits.length&&!cautions.length){el.innerHTML='';emp.style.display='block';return;}
+  emp.style.display='none';
+  var total=totalRetrait();
+  var html='<div style="background:#0e0e1c;border:1px solid rgba(34,197,94,.15);border-radius:16px;padding:16px;margin-bottom:16px">'+
+    '<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#3a3a5a;margin-bottom:4px">Total retiré</div>'+
+    '<div style="font-size:28px;font-weight:800;color:#22c55e">'+fB(total)+'</div>'+
+    '<div style="font-size:13px;color:#7777aa;margin-top:4px">'+fEa(total)+'</div></div>';
+  if(retraits.length){html+='<div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#3a3a5a;margin-bottom:10px;padding:0 4px">Retraits</div>';}
+  html+=[].concat(retraits).reverse().map(function(r){
+    return '<div class="retrait-row" onclick="editRetrait(\''+r.id+'\')">'+
+      '<div style="width:42px;height:42px;border-radius:13px;background:rgba(34,197,94,.12);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">💵</div>'+
+      '<div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:600">Retrait cash</div><div style="font-size:11px;color:#7777aa;margin-top:3px">'+fmtDate(r.date)+'</div></div>'+
+      '<div style="text-align:right;flex-shrink:0"><div style="font-size:15px;font-weight:700;color:#22c55e">+'+fB(r.amount)+'</div><div style="font-size:11px;color:#7777aa;margin-top:2px">'+fEa(r.amount)+'</div></div></div>';
+  }).join('');
+  if(cautions.length){
+    html+='<div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#3a3a5a;margin:16px 0 10px;padding:0 4px">Cautions</div>';
+    html+=[].concat(cautions).reverse().map(function(c){
+      return '<div class="caution-row" onclick="editCaution(\''+c.id+'\')">'+
+        '<div style="width:42px;height:42px;border-radius:13px;background:rgba(99,102,241,.12);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">'+(c.recovered?'✅':'🔒')+'</div>'+
+        '<div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:600">'+c.label+'</div><div style="font-size:11px;color:#7777aa;margin-top:3px">'+fmtDate(c.date)+(c.recovered?' · Récupérée':'')+'</div></div>'+
+        '<div style="text-align:right;flex-shrink:0"><div style="font-size:15px;font-weight:700;color:'+(c.recovered?'#22c55e':'#818cf8')+'">'+fB(c.amount)+'</div><div style="font-size:11px;color:#7777aa;margin-top:2px">'+fEa(c.amount)+'</div></div></div>';
+    }).join('');
+  }
+  el.innerHTML=html;
+}
+
 var editRetraitId=null;
 function openRetrait(){editRetraitId=null;document.getElementById('retrait-title').textContent='💵 Nouveau retrait cash';document.getElementById('r-amount').value='';document.getElementById('r-date').value=todayStr();document.getElementById('r-hint').textContent='';document.getElementById('r-delete').style.display='none';document.getElementById('r-submit').textContent='Ajouter ce retrait';document.getElementById('ov-retrait').classList.add('on');setTimeout(function(){document.getElementById('r-amount').focus();},300);}
-function editRetrait(id){var r=(state.retraits||[]).find(function(x){return x.id==id;});if(!r)return;editRetraitId=id;document.getElementById('retrait-title').textContent='✏️ Modifier le retrait';document.getElementById('r-amount').value=r.amount;document.getElementById('r-date').value=r.date;document.getElementById('r-hint').textContent=fE(r.amount);document.getElementById('r-delete').style.display='block';document.getElementById('r-submit').textContent='Modifier';document.getElementById('ov-retrait').classList.add('on');}
-function showHintR(){var v=parseFloat(document.getElementById('r-amount').value);document.getElementById('r-hint').textContent=v>0?fE(v):'';}
+function editRetrait(id){var r=(state.retraits||[]).find(function(x){return x.id==id;});if(!r)return;editRetraitId=id;document.getElementById('retrait-title').textContent='✏️ Modifier le retrait';document.getElementById('r-amount').value=r.amount;document.getElementById('r-date').value=r.date;document.getElementById('r-hint').textContent=fEa(r.amount);document.getElementById('r-delete').style.display='block';document.getElementById('r-submit').textContent='Modifier';document.getElementById('ov-retrait').classList.add('on');}
+function showHintR(){var v=parseFloat(document.getElementById('r-amount').value);document.getElementById('r-hint').textContent=v>0?fEa(v):'';}
 function submitRetrait(){var v=parseFloat(document.getElementById('r-amount').value);if(!v||v<=0)return;var r={id:editRetraitId||Date.now(),amount:v,date:document.getElementById('r-date').value||todayStr()};if(!state.retraits)state.retraits=[];if(editRetraitId){state.retraits=state.retraits.map(function(x){return x.id==editRetraitId?r:x;});}else{state.retraits.push(r);}save();closeSheet('ov-retrait');renderHome();renderRetraits();}
-function deleteRetrait(){if(!editRetraitId)return;state.retraits=state.retraits.filter(function(x){return x.id!=editRetraitId;});save();closeSheet('ov-retrait');renderHome();renderRetraits();}
-var editId=null;var curCat='nourriture';var curPayment='cash';
+function deleteRetrait(){if(!editRetraitId)return;if(!confirm('Supprimer ce retrait ?'))return;state.retraits=state.retraits.filter(function(x){return x.id!=editRetraitId;});save();closeSheet('ov-retrait');renderHome();renderRetraits();}
+
+var editCautionId=null;
+function openCaution(){editCautionId=null;document.getElementById('caution-title').textContent='🔒 Nouvelle caution';document.getElementById('c-amount').value='';document.getElementById('c-label').value='';document.getElementById('c-date').value=todayStr();document.getElementById('c-hint').textContent='';document.getElementById('c-delete').style.display='none';document.getElementById('c-recover').style.display='none';document.getElementById('c-submit').style.display='block';document.getElementById('ov-caution').classList.add('on');setTimeout(function(){document.getElementById('c-amount').focus();},300);}
+function editCaution(id){var c=(state.cautions||[]).find(function(x){return x.id==id;});if(!c)return;editCautionId=id;document.getElementById('caution-title').textContent='🔒 '+c.label;document.getElementById('c-amount').value=c.amount;document.getElementById('c-label').value=c.label;document.getElementById('c-date').value=c.date;document.getElementById('c-hint').textContent=fEa(c.amount);document.getElementById('c-delete').style.display='block';document.getElementById('c-submit').style.display='none';document.getElementById('c-recover').style.display=c.recovered?'none':'block';document.getElementById('ov-caution').classList.add('on');}
+function showHintC(){var v=parseFloat(document.getElementById('c-amount').value);document.getElementById('c-hint').textContent=v>0?fEa(v):'';}
+function submitCaution(){var v=parseFloat(document.getElementById('c-amount').value);if(!v||v<=0)return;var lbl=document.getElementById('c-label').value.trim()||'Caution';var c={id:Date.now(),amount:v,label:lbl,date:document.getElementById('c-date').value||todayStr(),recovered:false};if(!state.cautions)state.cautions=[];state.cautions.push(c);save();closeSheet('ov-caution');renderHome();renderRetraits();}
+function recoverCaution(){if(!editCautionId)return;state.cautions=state.cautions.map(function(c){return c.id==editCautionId?Object.assign({},c,{recovered:true}):c;});save();closeSheet('ov-caution');renderHome();renderRetraits();}
+function deleteCaution(){if(!editCautionId)return;state.cautions=state.cautions.filter(function(c){return c.id!=editCautionId;});save();closeSheet('ov-caution');renderHome();renderRetraits();}
+
+var editId=null;var curCat='nourriture';var curPayment='cash';var curVille='';
 function buildCatGrid(){var CATS=getCats();var g=document.getElementById('cat-grid');g.innerHTML=Object.keys(CATS).map(function(k){var c=CATS[k];return '<button class="cat-btn'+(k===curCat?' on':'')+'" id="cb-'+k+'" onclick="selCat(\''+k+'\')"><span class="cat-ic">'+c.i+'</span><span>'+c.l+'</span></button>';}).join('');}
+function buildVilleChips(){var villes=state.villes||[];var el=document.getElementById('ville-chips');el.innerHTML=villes.map(function(v){return '<span class="ville-chip'+(curVille===v?' on':'')+'" onclick="selVille(\''+v+'\')">📍'+v+'</span>';}).join('');}
+function selVille(v){curVille=v;document.getElementById('d-ville-new').value='';buildVilleChips();}
+function showNewVille(){var v=document.getElementById('d-ville-new').value.trim();if(v){curVille=v;document.querySelectorAll('.ville-chip').forEach(function(b){b.classList.remove('on');});}}
 function selCat(k){curCat=k;document.querySelectorAll('.cat-btn').forEach(function(b){b.classList.remove('on');});var btn=document.getElementById('cb-'+k);if(btn)btn.classList.add('on');var CATS=getCats();document.getElementById('d-label').placeholder=CATS[k]?CATS[k].l:'';}
 function setPayment(p){curPayment=p;document.getElementById('pay-cash').className='pay-btn'+(p==='cash'?' on-cash':'');document.getElementById('pay-card').className='pay-btn'+(p==='card'?' on-card':'');}
-function openDepense(){editId=null;curCat='nourriture';curPayment='cash';document.getElementById('dep-title').textContent='💸 Nouvelle dépense';document.getElementById('d-amount').value='';document.getElementById('d-label').value='';document.getElementById('d-date').value=todayStr();document.getElementById('d-hint').textContent='';document.getElementById('dep-delete').style.display='none';document.getElementById('dep-submit').textContent='Ajouter';setPayment('cash');buildCatGrid();document.getElementById('d-label').placeholder='Ex: Déjeuner au marché';document.getElementById('ov-dep').classList.add('on');setTimeout(function(){document.getElementById('d-amount').focus();},300);}
-function openEdit(id){var tx=state.txs.find(function(t){return t.id==id;});if(!tx)return;editId=id;curCat=tx.cat||'nourriture';curPayment=tx.payment||'cash';document.getElementById('dep-title').textContent='✏️ Modifier';document.getElementById('d-amount').value=tx.amount;document.getElementById('d-label').value=tx.label||'';document.getElementById('d-date').value=tx.date;document.getElementById('d-hint').textContent=tx.amount?fE(tx.amount):'';document.getElementById('dep-delete').style.display='block';document.getElementById('dep-submit').textContent='Modifier';setPayment(curPayment);buildCatGrid();document.getElementById('ov-dep').classList.add('on');}
-function showHintD(){var v=parseFloat(document.getElementById('d-amount').value);document.getElementById('d-hint').textContent=v>0?fE(v):'';}
-function submitDepense(){var v=parseFloat(document.getElementById('d-amount').value);if(!v||v<=0)return;var tx={id:editId||Date.now(),amount:v,cat:curCat,payment:curPayment,label:document.getElementById('d-label').value.trim(),date:document.getElementById('d-date').value||todayStr()};if(editId){state.txs=state.txs.map(function(t){return t.id==editId?tx:t;});}else{state.txs.push(tx);}save();closeSheet('ov-dep');renderHome();renderHistory();}
+function openDepense(){editId=null;curCat='nourriture';curPayment='cash';curVille='';document.getElementById('dep-title').textContent='💸 Nouvelle dépense';document.getElementById('d-amount').value='';document.getElementById('d-label').value='';document.getElementById('d-date').value=todayStr();document.getElementById('d-hint').textContent='';document.getElementById('d-ville-new').value='';document.getElementById('dep-delete').style.display='none';document.getElementById('dep-submit').textContent='Ajouter';setPayment('cash');buildCatGrid();buildVilleChips();document.getElementById('d-label').placeholder='Ex: Déjeuner au marché';document.getElementById('ov-dep').classList.add('on');setTimeout(function(){document.getElementById('d-amount').focus();},300);}
+function openEdit(id){var tx=state.txs.find(function(t){return t.id==id;});if(!tx)return;editId=id;curCat=tx.cat||'nourriture';curPayment=tx.payment||'cash';curVille=tx.ville||'';document.getElementById('dep-title').textContent='✏️ Modifier';document.getElementById('d-amount').value=tx.amount;document.getElementById('d-label').value=tx.label||'';document.getElementById('d-date').value=tx.date;document.getElementById('d-hint').textContent=tx.amount?fEa(tx.amount):'';document.getElementById('d-ville-new').value=curVille;document.getElementById('dep-delete').style.display='block';document.getElementById('dep-submit').textContent='Modifier';setPayment(curPayment);buildCatGrid();buildVilleChips();document.getElementById('ov-dep').classList.add('on');}
+function showHintD(){var v=parseFloat(document.getElementById('d-amount').value);document.getElementById('d-hint').textContent=v>0?fEa(v):'';}
+function submitDepense(){var v=parseFloat(document.getElementById('d-amount').value);if(!v||v<=0)return;var ville=document.getElementById('d-ville-new').value.trim()||curVille||'';if(ville&&!(state.villes||[]).includes(ville)){if(!state.villes)state.villes=[];state.villes.push(ville);}var tx={id:editId||Date.now(),amount:v,cat:curCat,payment:curPayment,label:document.getElementById('d-label').value.trim(),date:document.getElementById('d-date').value||todayStr(),ville:ville};if(editId){state.txs=state.txs.map(function(t){return t.id==editId?tx:t;});}else{state.txs.push(tx);}save();closeSheet('ov-dep');renderHome();renderHistory();}
 function deleteTx(){if(!editId)return;state.txs=state.txs.filter(function(t){return t.id!=editId;});save();closeSheet('ov-dep');renderHome();renderHistory();}
+
 function openNewCat(){closeSheet('ov-dep');setTimeout(function(){document.getElementById('ov-newcat').classList.add('on');},200);}
 function submitNewCat(){var emoji=document.getElementById('nc-emoji').value.trim()||'📦';var name=document.getElementById('nc-name').value.trim();if(!name)return;var key='custom_'+Date.now();if(!state.customCats)state.customCats={};state.customCats[key]={l:name,i:emoji,c:'#a78bfa'};curCat=key;save();closeSheet('ov-newcat');setTimeout(function(){document.getElementById('ov-dep').classList.add('on');buildCatGrid();selCat(key);},200);}
+
 function openSettings(){document.getElementById('s-return').value=state.returnDate||'';document.getElementById('ov-settings').classList.add('on');}
 function saveSettings(){state.returnDate=document.getElementById('s-return').value||null;save();closeSheet('ov-settings');renderHome();}
+
+function saveTaux(){state.tauxAirport=parseFloat(document.getElementById('taux-airport').value)||34;state.tauxMarket=parseFloat(document.getElementById('taux-market').value)||37.5;save();calcConv();}
 var convDir='eur';
-function setDir(d){convDir=d;document.getElementById('tog-eur').classList.toggle('on',d==='eur');document.getElementById('tog-thb').classList.toggle('on',d==='thb');document.getElementById('conv-label').textContent=d==='eur'?'Montant en euros':'Montant en bahts';document.getElementById('conv-prefix').textContent=d==='eur'?'€':'฿';document.getElementById('conv-inp').value='';document.getElementById('conv-result').textContent='—';}
-function calcConv(){var v=parseFloat(document.getElementById('conv-inp').value);var el=document.getElementById('conv-result');if(!v||v<=0){el.textContent='—';return;}if(convDir==='eur'){el.textContent='฿'+Math.round(v*TAUX).toLocaleString('fr-FR');}else{el.textContent=(v/TAUX).toFixed(2)+' €';}}
-function renderRef(){var refs=[[10,375],[20,750],[50,1875],[100,3750],[200,7500],[500,18750]];document.getElementById('ref-table').innerHTML=refs.map(function(r){return '<div class="ref-row"><span style="font-size:15px;font-weight:600;color:#7777aa">'+r[0]+' €</span><span style="font-size:11px;color:#3a3a5a">→</span><span style="font-size:15px;font-weight:700">฿'+r[1].toLocaleString('fr-FR')+'</span></div>';}).join('');}
+function setDir(d){convDir=d;document.getElementById('tog-eur').classList.toggle('on',d==='eur');document.getElementById('tog-thb').classList.toggle('on',d==='thb');document.getElementById('conv-label').textContent=d==='eur'?'Montant en euros':'Montant en bahts';document.getElementById('conv-prefix').textContent=d==='eur'?'€':'฿';document.getElementById('conv-inp').value='';document.getElementById('conv-res-wrap').style.display='none';}
+function calcConv(){var v=parseFloat(document.getElementById('conv-inp').value);var wrap=document.getElementById('conv-res-wrap');if(!v||v<=0){wrap.style.display='none';return;}wrap.style.display='block';if(convDir==='eur'){document.getElementById('conv-airport').textContent='฿'+Math.round(v*tA()).toLocaleString('fr-FR');document.getElementById('conv-market').textContent='฿'+Math.round(v*tM()).toLocaleString('fr-FR');}else{document.getElementById('conv-airport').textContent=(v/tA()).toFixed(2)+' €';document.getElementById('conv-market').textContent=(v/tM()).toFixed(2)+' €';}}
+function renderConvert(){document.getElementById('taux-airport').value=state.tauxAirport||34;document.getElementById('taux-market').value=state.tauxMarket||37.5;renderRef();}
+function renderRef(){var refs=[[10],[20],[50],[100],[200],[500]];var ta=tA();document.getElementById('ref-table').innerHTML=refs.map(function(r){var eur=r[0];return '<div class="ref-row"><span style="font-size:15px;font-weight:600;color:#7777aa">'+eur+' €</span><span style="font-size:11px;color:#3a3a5a">→</span><span style="font-size:15px;font-weight:700">฿'+Math.round(eur*ta).toLocaleString('fr-FR')+'</span></div>';}).join('');}
+
 function closeSheet(id){document.getElementById(id).classList.remove('on');}
+
+// Bouton caution dans nav retraits
+document.getElementById('pg-retraits').querySelector('.hd').innerHTML+='<button class="btn-sm" onclick="openCaution()" style="border-color:rgba(99,102,241,.3);color:#818cf8">+ Caution</button>';
+
 checkSplash();
 renderHome();
-renderRef();
+renderConvert();
 </script>
 </body>
 </html>
